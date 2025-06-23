@@ -11,7 +11,15 @@
         @endsession
 
         <div class="card">
-            <div class="card-header">Product List</div>
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <span>Product List</span>
+
+            <form action="{{ route('logout') }}" method="POST">
+                @csrf
+                <button type="submit" class="btn btn-danger btn-sm">Logout</button>
+            </form>
+        </div>
+
             <div class="card-body">
                 <a href="{{ route('products.create') }}" class="btn btn-success btn-sm my-2">
                     <i class="bi bi-plus-circle"></i> Add New Product

@@ -43,7 +43,7 @@ class ProductController extends Controller
         Product::create($validatedData);
 
         return redirect()->route('products.index')
-             ->withSuccess('New prodcut is added successfully.');
+             ->withSuccess('New product is added successfully.');
     }
 
     /**
